@@ -19,10 +19,9 @@ services:
     container_name: beszel-agent
     network_mode: host
     environment:
-      - LISTEN=/beszel_socket/beszel.sock
-      - HUB_URL=http://beszel:8090
-      - TOKEN="<TOKEN>"
-      - KEY="<KEY>"
+      LISTEN: /beszel_socket/beszel.sock
+      HUB_URL: http://beszel:8090
+      KEY: ${BESZEL_AGENT_KEY}
     volumes:
       - ${DOCKER_DATA_DIR}/beszel/agent:/var/lib/beszel-agent
       - ${DOCKER_DATA_DIR}/beszel/socket:/beszel_socket

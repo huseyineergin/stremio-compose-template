@@ -1,7 +1,9 @@
 include:
   - apps/aiostreams/compose.yaml
+  - apps/beszel/compose.yaml
   - apps/mediaflow-proxy/compose.yaml
   - apps/traefik/compose.yaml
+  - apps/uptime-kuma/compose.yaml
   - apps/warp/compose.yaml
 
 networks:
