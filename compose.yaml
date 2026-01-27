@@ -1,0 +1,10 @@
+include:
+  - apps/aiostreams/compose.yaml
+  - apps/mediaflow-proxy/compose.yaml
+  - apps/traefik/compose.yaml
+  - apps/warp/compose.yaml
+
+networks:
+  default:
+    external: ${DOCKER_NETWORK_EXTERNAL:-false}
+    name: ${DOCKER_NETWORK_NAME:-stremio-network}

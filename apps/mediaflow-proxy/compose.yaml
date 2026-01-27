@@ -1,0 +1,14 @@
+services:
+  mediaflow-proxy:
+    image: mhdzumair/mediaflow-proxy:v2.4.1
+    container_name: mediaflow-proxy
+    expose:
+      - 8888
+    env_file:
+      - .env
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mediaflow.rule=Host(`${MEDIAFLOW_HOSTNAME?}`)"
+      - "traefik.http.routers.mediaflow.entrypoints=websecure"
+      - "traefik.http.routers.mediaflow.tls.certresolver=letsencrypt"
+    restart: unless-stopped

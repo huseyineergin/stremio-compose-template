@@ -1,0 +1,33 @@
+services:
+  aiostreams:
+    image: viren070/aiostreams:v2.22.0
+    container_name: aiostreams
+    expose:
+      - 3000
+    env_file:
+      - .env
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.aiostreams.rule=Host(`${AIOSTREAMS_HOSTNAME?}`)"
+      - "traefik.http.routers.aiostreams.entrypoints=websecure"
+      - "traefik.http.routers.aiostreams.tls.certresolver=letsencrypt"
+    volumes:
+      - ${DOCKER_DATA_DIR}/aiostreams:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:18-alpine
+    container_name: postgres
+    env_file:
+      - .env
+    volumes:
+      - ${DOCKER_DATA_DIR}/postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres_user -d postgres_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
