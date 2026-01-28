@@ -18,13 +18,13 @@ services:
         condition: service_healthy
     restart: unless-stopped
 
-  postgres:
+  aiostreams-postgres:
     image: postgres:18-alpine
-    container_name: postgres
+    container_name: aiostreams-postgres
     env_file:
       - .env
     volumes:
-      - ${DOCKER_DATA_DIR}/postgres:/var/lib/postgresql
+      - ${DOCKER_DATA_DIR}/aiostreams/db:/var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
