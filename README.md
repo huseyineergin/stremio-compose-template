@@ -290,26 +290,32 @@ In the WireGuard client, select the tunnel and click `Activate`. A successful ha
 
 ### Installation
 
-1. Clone this repository and navigate into it:
+1. Prepare the installation folder.
+```
+sudo mkdir /opt/stremio
+sudo chown 1000:1000 /opt/stremio
+```
+
+2. Clone this repository and navigate into it:
 ```sh
 cd /opt
 git clone https://github.com/huseyineergin/stremio-template.git
 cd stremio
 ```
 
-2. Use a text editor (nano, vim) to open the `.env` file in the `apps` folder. **VS Code (with the `Remote - SSH` extension)** can also be used to edit the files.
+3. Use a text editor (nano, vim) to open the `.env` file in the `apps` folder. **VS Code (with the `Remote - SSH` extension)** can also be used to edit the files.
 ```sh
 vim .env
 ```
 
-3. Set the following values in the `.env` file in the `apps` folder:
+4. Set the following values in the `.env` file in the `apps` folder:
 - `DOMAIN`
 - `AUTHELIA_JWT_SECRET`
 - `AUTHELIA_SESSION_SECRET`
 - `AUTHELIA_STORAGE_ENCRYPTION_KEY`
 - `ADDON_PROXY`
 
-4. Set the following values in the `.env` file in the `apps/aiostreams` folder:
+5. Set the following values in the `.env` file in the `apps/aiostreams` folder:
 - `ADDON_ID`
 - `SECRET_KEY`
 - `ADDON_PASSWORD`
@@ -318,17 +324,17 @@ vim .env
 
 When using PostgreSQL for AIOStreams’ database, set `POSTGRES_PASSWORD`, `POSTGRES_USER`, and `POSTGRES_DB`.
 
-5. Set the following values in the `.env` file in the `apps/authelia` folder:
+6. Set the following values in the `.env` file in the `apps/authelia` folder:
 - `REDIS_PASSWORD`
 - `POSTGRES_PASSWORD`
 - `POSTGRES_USER`
 - `POSTGRES_DB`
 
-6. Set the following values in the `.env` file in the `apps/mediaflow-proxy` folder:
+7. Set the following values in the `.env` file in the `apps/mediaflow-proxy` folder:
 - `API_PASSWORD`
 - `PROXY_URL`
 
-7. Set the email address in the `traefik.yaml` file in the `apps/traefik` folder:
+8. Set the email address in the `traefik.yaml` file in the `apps/traefik` folder:
 ```yaml
 certificatesResolvers:
   letsencrypt:
@@ -339,7 +345,7 @@ certificatesResolvers:
         entryPoint: web
 ```
 
-8. Ensure the current directory is the root of the apps folder, `/opt/stremio` if unchanged, and not inside an app-specific folder. This can be verified by running `pwd` and confirming it returns `/opt/stremio`. Once the folder is confirmed, start the services:
+9. Ensure the current directory is the root of the apps folder, `/opt/stremio` if unchanged, and not inside an app-specific folder. This can be verified by running `pwd` and confirming it returns `/opt/stremio`. Once the folder is confirmed, start the services:
 ```sh
 docker compose up -d
 ```
