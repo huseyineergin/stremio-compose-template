@@ -4,13 +4,13 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 
 ## Contents
 
-1. [Services](#services)
-2. [VPS Setup](#vps-setup)
-    - [Essential Setup](#essential-setup)
-    - [Extra Setup](#extra-setup)
-3. [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
+- [Services](#services)
+- [VPS Setup](#vps-setup)
+    * [Essential Setup](#essential-setup)
+    * [Extra Setup](#extra-setup)
+- [Getting Started](#getting-started)
+    * [Prerequisites](#prerequisites)
+    * [Installation](#installation)
 
 ## Services
 
