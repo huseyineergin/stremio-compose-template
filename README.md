@@ -121,7 +121,7 @@ This sets up a basic firewall and allows traffic on ports 80 and 443.
 
 ### Extra Setup
 
-The configurations outlined in this section are optional and serve to enhance the security of the environment. While not mandatory for basic server operation, implementing a private network tunnel is a recommended best practice for administrative access.
+The configurations outlined in this section are optional and serve to enhance the security of the environment. While not mandatory for basic server operation, implementing a private network tunnel is a recommended best practice for administrative access. Most of this section is based on ["How To Set Up WireGuard on Ubuntu 22.04"](https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-22-04) by Jamon Camisso.
 
 #### Tunneling vs. Public Exposure
 
