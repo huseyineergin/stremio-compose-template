@@ -120,10 +120,10 @@ The configurations outlined in this section are optional and serve to enhance th
 
 #### Tunneling vs. Public Exposure
 
-Exposing service ports, such as SSH (Port 22), directly to the public internet increases the attack surface of a server. Publicly accessible ports are subject to continuous automated brute-force attacks and vulnerability scanning. By utilizing a Virtual Private Network (VPN) like WireGuard, administrative services can be restricted to a private network interface.
+Exposing service ports, such as SSH (Port 22), directly to the public network increases the attack surface of a server. Publicly accessible ports are subject to continuous automated brute-force attacks and vulnerability scanning. By utilizing a Virtual Private Network (VPN) like WireGuard, administrative services can be restricted to a private network interface.
 
 Connecting via a private IP address ensures that:
-- The SSH daemon can be configured to listen only on the internal WireGuard IP (e.g., `10.8.0.1`), making it invisible to the public internet.
+- The SSH daemon can be configured to listen only on the internal WireGuard IP (e.g., `10.8.0.1`), making it invisible to the public network.
 - An additional layer of cryptographic authentication is required before a user can even attempt to authenticate with the server.
 - Lateral movement is restricted, as only authenticated peers can route traffic through the tunnel.
 
