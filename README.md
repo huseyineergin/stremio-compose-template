@@ -303,7 +303,7 @@ git clone https://github.com/huseyineergin/stremio-template.git
 cd stremio
 ```
 
-3. Use a text editor (nano, vim) to open the `.env` file in the `apps` folder. **VS Code (with the `Remote - SSH` extension)** can also be used to edit the files.
+3. Use a text editor (nano, vim) to open the `.env` file in the `apps` folder. VS Code (with the `Remote - SSH` extension) can also be used to edit the files.
 ```sh
 vim .env
 ```
