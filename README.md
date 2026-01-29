@@ -250,7 +250,7 @@ PublicKey = base64_encoded_PEER_PUBLIC_key_goes_here
 AllowedIPs = 10.8.0.2
 ```
 
-#### Update SSH Daemon and WireGuard to Apply Changes
+#### Update SSH Daemon, Firewall, and WireGuard to Apply Changes
 
 Bind SSH to the WireGuard interface, blocking public access.
 ```sh
@@ -260,6 +260,11 @@ sudo vim /etc/ssh/sshd_config
 Add the following lines to the file.
 ```conf
 ListenAddress 10.8.0.1
+```
+
+Update the firewall to allow WireGuard traffic.
+```sh
+sudo ufw allow 51820/udp
 ```
 
 Restart SSH.
