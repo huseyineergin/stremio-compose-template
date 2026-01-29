@@ -21,7 +21,7 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 - **[MediaFlow Proxy](https://github.com/mhdzumair/mediaflow-proxy)** is a powerful and flexible solution for proxifying various types of media streams.
 - **[Traefik](https://github.com/traefik/traefik)** is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
 - **[Uptime Kuma](https://github.com/louislam/uptime-kuma)** is an easy-to-use self-hosted monitoring tool.
-- **[WARP-Docker](https://github.com/cmj2002/warp-docker)** runs official [Cloudflare WARP](1.1.1.1) client in Docker.
+- **[WARP-Docker](https://github.com/cmj2002/warp-docker)** runs official [Cloudflare WARP](https://1.1.1.1) client in Docker.
 
 ## VPS Setup
 
