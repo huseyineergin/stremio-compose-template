@@ -299,7 +299,7 @@ sudo chown 1000:1000 /opt/stremio
 2. Clone this repository and navigate into it:
 ```sh
 cd /opt
-git clone https://github.com/huseyineergin/stremio-template.git
+git clone https://github.com/huseyineergin/stremio-compose-template.git stremio
 cd stremio
 ```
 
