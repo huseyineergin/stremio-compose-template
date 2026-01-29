@@ -323,7 +323,6 @@ vim .env
 - `AUTHELIA_JWT_SECRET`
 - `AUTHELIA_SESSION_SECRET`
 - `AUTHELIA_STORAGE_ENCRYPTION_KEY`
-- `ADDON_PROXY`
 
 6. Set the following values in the `apps/aiostreams/.env` file:
 - `ADDON_ID`
