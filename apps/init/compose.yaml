@@ -11,4 +11,6 @@ services:
       - ${DOCKER_DATA_DIR}:/data
       - ./init.sh:/init.sh
     entrypoint: ["/bin/sh", "/init.sh"]
+    profiles:
+      - init
     restart: "no"
