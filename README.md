@@ -296,7 +296,7 @@ In the WireGuard client, select the tunnel and click `Activate`. A successful ha
 ### Installation
 
 1. Prepare the installation folder.
-```
+```sh
 sudo mkdir /opt/stremio
 sudo chown 1000:1000 /opt/stremio
 ```
