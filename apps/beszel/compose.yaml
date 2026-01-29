@@ -14,8 +14,11 @@ services:
       - ${DOCKER_DATA_DIR}/beszel/data:/beszel_data
     healthcheck:
       test: ["CMD", "/beszel", "health", "--url", "http://localhost:8090"]
-      start_period: 5s
-      interval: 120s
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+      start_interval: 5s
     restart: unless-stopped
 
   beszel-agent:
@@ -32,6 +35,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     healthcheck:
       test: ["CMD", "/agent", "health"]
-      start_period: 5s
-      interval: 120s
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+      start_interval: 5s
     restart: unless-stopped
