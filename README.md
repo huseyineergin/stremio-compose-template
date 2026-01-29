@@ -308,19 +308,24 @@ git clone https://github.com/huseyineergin/stremio-compose-template.git stremio
 cd stremio
 ```
 
-3. Use a text editor (nano, vim) to open the `.env` file in the `apps` folder. VS Code (with the `Remote - SSH` extension) can also be used to edit the files.
+3. Run the `init` service. This sets up required folders and configures permissions.
+```sh
+docker compose up -d init
+```
+
+4. Use a text editor (nano, vim) to open the `.env` file. VS Code (with the `Remote - SSH` extension) can also be used to edit the files.
 ```sh
 vim .env
 ```
 
-4. Set the following values in the `.env` file in the `apps` folder:
+5. Set the following values in the `.env` file:
 - `DOMAIN`
 - `AUTHELIA_JWT_SECRET`
 - `AUTHELIA_SESSION_SECRET`
 - `AUTHELIA_STORAGE_ENCRYPTION_KEY`
 - `ADDON_PROXY`
 
-5. Set the following values in the `.env` file in the `apps/aiostreams` folder:
+6. Set the following values in the `apps/aiostreams/.env` file:
 - `ADDON_ID`
 - `SECRET_KEY`
 - `ADDON_PASSWORD`
@@ -329,13 +334,15 @@ vim .env
 
 When using PostgreSQL for AIOStreams’ database, set `POSTGRES_PASSWORD`, `POSTGRES_USER`, and `POSTGRES_DB`.
 
-6. Set the following values in the `.env` file in the `apps/authelia` folder:
+> **Note:** When NOT using PostgreSQL for AIOStreams’ database, comment out the PostgreSQL related entries in `apps/aiostreams/compose.yaml`.
+
+6. Set the following values in the `apps/authelia/.env` file:
 - `REDIS_PASSWORD`
 - `POSTGRES_PASSWORD`
 - `POSTGRES_USER`
 - `POSTGRES_DB`
 
-7. Define the users in the `users.yaml` file in the `apps/authelia/config` folder:
+8. Define the users in the `apps/authelia/config/users.yaml` file:
 ```yaml
 users:
   john.doe:
@@ -350,11 +357,11 @@ users:
       - "dev"
 ```
 
-8. Set the following values in the `.env` file in the `apps/mediaflow-proxy` folder:
+9. Set the following values in the `apps/mediaflow-proxy/.env` file:
 - `API_PASSWORD`
 - `PROXY_URL`
 
-9. Set the email address in the `traefik.yaml` file in the `apps/traefik` folder:
+10. Set the email address in the `apps/traefik/traefik.yaml` file:
 ```yaml
 certificatesResolvers:
   letsencrypt:
@@ -365,9 +372,9 @@ certificatesResolvers:
         entryPoint: web
 ```
 
-10. Ensure the current directory is the root of the apps folder, `/opt/stremio` if unchanged, and not inside an app-specific folder. This can be verified by running `pwd` and confirming it returns `/opt/stremio`. Once the folder is confirmed, start the services:
+11. Start the services:
 ```sh
 docker compose up -d
 ```
 
-Once the services are running, follow the instructions in the `.env` file in the `apps/beszel` folder to set up Beszel.
+Once the services are running, follow the instructions in the `apps/beszel/.env` file to set up Beszel.
