@@ -267,7 +267,7 @@ Update the firewall to allow WireGuard traffic.
 sudo ufw allow 51820/udp
 ```
 
-> After binding SSH to `10.8.0.1`, the public UFW rule for port 22 can be removed (`ufw delete allow 22`) to ensure SSH access is restricted to the tunnel.
+> **Note:** After binding SSH to `10.8.0.1`, the public UFW rule for port 22 can be removed (`ufw delete allow 22`) to ensure SSH access is restricted to the tunnel.
 
 Restart SSH.
 ```sh
