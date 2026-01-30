@@ -1,6 +1,6 @@
 # Stremio Compose Template
 
-This is a simplified version of [Viren070's template](https://github.com/Viren070/docker-compose-template) with few changes, focusing only on Stremio services.
+This is a simplified version of [Viren070's template](https://github.com/Viren070/docker-compose-template) with several modifications, focusing only on Stremio services.
 
 ## Contents
 
@@ -297,36 +297,36 @@ In the WireGuard client, select the tunnel and click `Activate`. A successful ha
 
 ### Installation
 
-1. Prepare the installation folder.
+1\. Prepare the installation folder.
 ```sh
 sudo mkdir /opt/stremio
 sudo chown 1000:1000 /opt/stremio
 ```
 
-2. Clone this repository and navigate into it:
+2\. Clone this repository and navigate into it:
 ```sh
 cd /opt
 git clone https://github.com/huseyineergin/stremio-compose-template.git stremio
 cd stremio
 ```
 
-3. Run the `init` service. This sets up required folders and configures permissions.
+3\. Run the `init` service. This sets up required folders and configures permissions.
 ```sh
 docker compose up -d init
 ```
 
-4. Use a text editor (nano, vim) to open the `.env` file. VS Code (with the `Remote - SSH` extension) can also be used to edit the files.
+4\. Use a text editor (nano, vim) to open the `.env` file. VS Code (with the `Remote - SSH` extension) can also be used to edit the files.
 ```sh
 vim .env
 ```
 
-5. Set the following values in the `.env` file:
+5\. Set the following values in the `.env` file:
 - `DOMAIN`
 - `AUTHELIA_JWT_SECRET`
 - `AUTHELIA_SESSION_SECRET`
 - `AUTHELIA_STORAGE_ENCRYPTION_KEY`
 
-6. Set the following values in the `apps/aiostreams/.env` file:
+6\. Set the following values in the `apps/aiostreams/.env` file:
 - `ADDON_ID`
 - `SECRET_KEY`
 - `ADDON_PASSWORD`
@@ -337,13 +337,13 @@ When using PostgreSQL for AIOStreams’ database, set `POSTGRES_PASSWORD`, `POST
 
 > **Note:** When NOT using PostgreSQL for AIOStreams’ database, comment out the PostgreSQL related entries in `apps/aiostreams/compose.yaml` file.
 
-7. Set the following values in the `apps/authelia/.env` file:
+7\. Set the following values in the `apps/authelia/.env` file:
 - `REDIS_PASSWORD`
 - `POSTGRES_PASSWORD`
 - `POSTGRES_USER`
 - `POSTGRES_DB`
 
-8. Define the users in the `apps/authelia/config/users.yaml` file:
+8\. Define the users in the `apps/authelia/config/users.yaml` file:
 ```yaml
 users:
   john.doe:
@@ -358,11 +358,11 @@ users:
       - "dev"
 ```
 
-9. Set the following values in the `apps/mediaflow-proxy/.env` file:
+9\. Set the following values in the `apps/mediaflow-proxy/.env` file:
 - `API_PASSWORD`
 - `PROXY_URL`
 
-10. Set the email address in the `apps/traefik/traefik.yaml` file:
+10\. Set the email address in the `apps/traefik/traefik.yaml` file:
 ```yaml
 certificatesResolvers:
   letsencrypt:
@@ -373,7 +373,7 @@ certificatesResolvers:
         entryPoint: web
 ```
 
-11. Start the services:
+11\. Start the services:
 ```sh
 docker compose up -d
 ```
