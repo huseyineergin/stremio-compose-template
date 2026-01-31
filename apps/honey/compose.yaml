@@ -1,0 +1,24 @@
+services:
+  honey:
+    build:
+      context: .
+      args:
+        PUID: ${PUID}
+        PGID: ${PGID}
+    image: honey:v2.4.1
+    container_name: honey
+    user: ${PUID}:${PGID}
+    env_file:
+      - .env
+    expose:
+      - 4173
+    volumes:
+      # Place images in this folder and reference them as 'img/custom/image.jpg' in 'config.json'.
+      - ${DOCKER_DATA_DIR}/honey:/app/dist/img/custom
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.honey.rule=Host(`${HONEY_HOSTNAME?}`)"
+      - "traefik.http.routers.honey.entrypoints=websecure"
+      - "traefik.http.routers.honey.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.honey.middlewares=authelia@docker"
+    restart: unless-stopped

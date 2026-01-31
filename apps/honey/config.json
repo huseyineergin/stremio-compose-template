@@ -1,0 +1,55 @@
+{
+  "ui": {
+    "name": "honey",
+    "desc": "Nice and sweet place for all your self-hosted services.",
+    "icon": "img/icon.png",
+    "wallpaper": "img/background.jpg",
+    "wallpaper_dark": "img/background-dark.jpg",
+    "dark_mode": "Auto",
+    "open_new_tab": false,
+    "ping_dots": false,
+    "blur": true,
+    "animations": true,
+    "trusted_domains": [
+      "${DOMAIN}"
+    ]
+  },
+  "services": [
+    {
+      "name": "AIOStreams",
+      "desc": "",
+      "href": "https://${AIOSTREAMS_HOSTNAME}",
+      "icon": "https://raw.githubusercontent.com/Viren070/AIOStreams/refs/heads/main/branding/SVG/Logo%20White.svg"
+    },
+    {
+      "name": "Authelia",
+      "desc": "",
+      "href": "https://${AUTHELIA_HOSTNAME}",
+      "icon": "https://raw.githubusercontent.com/authelia/authelia/refs/heads/master/docs/static/images/branding/logo-cropped.svg"
+    },
+    {
+      "name": "Beszel",
+      "desc": "",
+      "href": "https://${BESZEL_HOSTNAME}",
+      "icon": "https://raw.githubusercontent.com/henrygd/beszel/refs/heads/main/internal/site/public/static/icon.svg"
+    },
+    {
+      "name": "Dozzle",
+      "desc": "",
+      "href": "https://${DOZZLE_HOSTNAME}",
+      "icon": "https://raw.githubusercontent.com/amir20/dozzle/refs/heads/master/docs/public/logo.svg"
+    },
+    {
+      "name": "Traefik",
+      "desc": "",
+      "href": "https://${TRAEFIK_HOSTNAME}",
+      "icon": "https://icon.icepanel.io/Technology/svg/Traefik-Proxy.svg"
+    },
+    {
+      "name": "Uptime Kuma",
+      "desc": "",
+      "href": "https://${UPTIME_KUMA_HOSTNAME}",
+      "icon": "https://raw.githubusercontent.com/louislam/uptime-kuma/refs/heads/master/public/icon.svg"
+    }
+  ]
+}

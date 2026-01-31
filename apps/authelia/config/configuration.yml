@@ -36,6 +36,7 @@ access_control:
 
     - domain:
         - '{{ env "TEMPLATE_DOZZLE_HOSTNAME"  }}'
+        - '{{ env "TEMPLATE_HONEY_HOSTNAME"  }}'
         - '{{ env "TEMPLATE_TRAEFIK_HOSTNAME"  }}'
       policy: "one_factor"
 

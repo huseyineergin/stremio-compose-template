@@ -14,6 +14,9 @@ mkdir -p /data/beszel/data
 mkdir -p /data/beszel/agent
 mkdir -p /data/beszel/socket
 
+# Honey
+mkdir -p /data/honey
+
 # Traefik
 touch /letsencrypt/acme.json
 chmod 600 /letsencrypt/acme.json
