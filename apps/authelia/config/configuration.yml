@@ -33,11 +33,20 @@ access_control:
         - '{{ env "TEMPLATE_BESZEL_HOSTNAME"  }}'
         - '{{ env "TEMPLATE_UPTIME_KUMA_HOSTNAME"  }}'
       policy: "bypass"
+
     - domain:
-        - '{{ env "TEMPLATE_AIOSTREAMS_HOSTNAME"  }}'
         - '{{ env "TEMPLATE_DOZZLE_HOSTNAME"  }}'
         - '{{ env "TEMPLATE_TRAEFIK_HOSTNAME"  }}'
       policy: "one_factor"
+
+    - domain: '{{ env "TEMPLATE_AIOSTREAMS_HOSTNAME"  }}'
+      resources:
+        - '.*?/configure($|/.*$|\?.*$)'
+        - "^/$"
+      policy: "one_factor"
+
+    - domain: '{{ env "TEMPLATE_AIOSTREAMS_HOSTNAME"  }}'
+      policy: "bypass"
 
 # Reference: https://www.authelia.com/configuration/identity-validation/introduction/
 identity_validation:
