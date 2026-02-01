@@ -394,4 +394,4 @@ In the `Proxy` menu of AIOStreams setup, set the following values:
 - **Proxy Service**: Select `Mediaflow Proxy`.
 - **URL**: Enter `http://mediaflow-proxy:8888`.
 - **Public URL**: Enter `https://mediaflow.DOMAIN.com`.
-- **Credentials**: Value of `API_PASSWORD` in `apps/mediaflow-proxy/.env` file.
+- **Credentials**: Enter the value of `API_PASSWORD` in `apps/mediaflow-proxy/.env` file.
