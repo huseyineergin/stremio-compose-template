@@ -11,7 +11,7 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 - [Getting Started](#getting-started)
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
-    * [Installation](#installation)
+    * [Post-Installation](#post-installation)
 
 ## Services
 
