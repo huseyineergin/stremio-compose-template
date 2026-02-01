@@ -11,6 +11,7 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 - [Getting Started](#getting-started)
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
+    * [Installation](#installation)
 
 ## Services
 
@@ -384,3 +385,13 @@ docker compose up -d
 ```
 
 Once the services are running, follow the instructions in the `apps/beszel/.env` file to set up Beszel.
+
+### Post-Installation
+
+#### Mediaflow Proxy
+
+In the `Proxy` menu of AIOStreams setup, set the following values:
+- **Proxy Service**: Select `Mediaflow Proxy`.
+- **URL**: Enter `http://mediaflow-proxy:8888`.
+- **Public URL**: Enter `https://mediaflow.DOMAIN.com`.
+- **Credentials**: Value of `API_PASSWORD` in `apps/mediaflow-proxy/.env` file.
