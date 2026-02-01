@@ -133,13 +133,13 @@ Connecting via a private IP address ensures that:
 
 [WireGuard](https://www.wireguard.com/) is a modern, high-performance VPN protocol that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than older protocols like IPsec and OpenVPN, while avoiding the massive headache. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable.
 
-> **Note:** [Tailscale](https://tailscale.com/) is an alternative with a simpler setup process. It is built on the WireGuard protocol.
-
 #### How WireGuard Works
 
 - **Cryptographic Key Routing**: WireGuard associates public keys with a list of allowed tunnel IP addresses. Each peer has a private key and a public key used for mutual authentication.
 - **UDP-Based**: It operates over UDP. If the server receives a packet that does not contain a valid cryptographic signature from a known peer, it simply drops the packet. This makes the server appear "silent" to unauthorized scanners.
 - **Stateless Feel**: To the user, the connection feels stateless. Because it does not maintain a persistent connection in the traditional sense, it handles roaming seamlessly without requiring a manual reconnect.
+
+> **Note:** [Tailscale](https://tailscale.com/) is an alternative with a simpler setup process. It is built on the WireGuard protocol.
 
 #### Understanding Server and Peer
 
