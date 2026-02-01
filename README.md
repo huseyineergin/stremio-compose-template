@@ -1,6 +1,6 @@
 # Stremio Compose Template
 
-This is a simplified version of [Viren070's template](https://github.com/Viren070/docker-compose-template) with several modifications, focusing only on Stremio services.
+This is a simplified version of [Viren070's template](https://github.com/Viren070/docker-compose-template) with several modifications, focusing on Stremio and monitoring services.
 
 ## Contents
 
@@ -65,7 +65,7 @@ mkdir /home/debian/.ssh
 chmod 700 /home/debian/.ssh
 ```
 
-Set a password for login user. Use a complex password. This password will be used for `sudo` access.
+Set a password for the login user. Use a complex password. This password will be used for `sudo` access.
 ```sh
 passwd debian
 ```
