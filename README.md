@@ -102,7 +102,7 @@ Restart SSH.
 ```sh
 service ssh restart
 # or
-systemctl restart sshd.service
+systemctl restart ssh.service
 ```
 
 #### 6. Configure Firewall
@@ -225,7 +225,7 @@ Configure the interface section.
 ```conf
 [Interface]
 PrivateKey = base64_encoded_PEER_PRIVATE_key_goes_here
-Address = 10.0.0.2/24
+Address = 10.8.0.2/24
 ```
 
 Add server details under `[Peer]`:
@@ -274,7 +274,7 @@ Restart SSH.
 ```sh
 sudo service ssh restart
 # or
-sudo systemctl restart sshd.service
+sudo systemctl restart ssh.service
 ```
 
 Reload or restart the WireGuard service to apply changes.
