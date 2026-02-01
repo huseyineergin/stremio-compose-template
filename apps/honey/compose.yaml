@@ -8,10 +8,10 @@ services:
     image: honey:v2.4.1
     container_name: honey
     user: ${PUID}:${PGID}
-    env_file:
-      - .env
     expose:
       - 4173
+    env_file:
+      - .env
     volumes:
       # Place images in this folder and reference them as 'img/custom/image.jpg' in 'config.json'.
       - ${DOCKER_DATA_DIR}/honey:/app/dist/img/custom
