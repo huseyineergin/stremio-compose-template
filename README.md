@@ -133,6 +133,8 @@ Connecting via a private IP address ensures that:
 
 [WireGuard](https://www.wireguard.com/) is a modern, high-performance VPN protocol that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than older protocols like IPsec and OpenVPN, while avoiding the massive headache. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable.
 
+> **Note:** [Tailscale](https://tailscale.com/) is an alternative with a simpler setup process. It is built on the WireGuard protocol.
+
 #### How WireGuard Works
 
 - **Cryptographic Key Routing**: WireGuard associates public keys with a list of allowed tunnel IP addresses. Each peer has a private key and a public key used for mutual authentication.
