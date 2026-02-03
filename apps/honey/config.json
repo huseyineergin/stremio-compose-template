@@ -10,9 +10,7 @@
     "ping_dots": false,
     "blur": true,
     "animations": true,
-    "trusted_domains": [
-      "${DOMAIN}"
-    ]
+    "trusted_domains": ["${DOMAIN}"]
   },
   "services": [
     {
