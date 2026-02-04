@@ -31,20 +31,17 @@ access_control:
   rules:
     - domain:
         - '{{ env "TEMPLATE_BESZEL_HOSTNAME"  }}'
-        - '{{ env "TEMPLATE_UPTIME_KUMA_HOSTNAME"  }}'
-      policy: "bypass"
-
-    - domain:
         - '{{ env "TEMPLATE_DOZZLE_HOSTNAME"  }}'
         - '{{ env "TEMPLATE_HONEY_HOSTNAME"  }}'
         - '{{ env "TEMPLATE_TRAEFIK_HOSTNAME"  }}'
-      policy: "one_factor"
+        - '{{ env "TEMPLATE_UPTIME_KUMA_HOSTNAME"  }}'
+      policy: "two_factor"
 
     - domain: '{{ env "TEMPLATE_AIOSTREAMS_HOSTNAME"  }}'
       resources:
         - '.*?/configure($|/.*$|\?.*$)'
         - "^/$"
-      policy: "one_factor"
+      policy: "two_factor"
 
     - domain: '{{ env "TEMPLATE_AIOSTREAMS_HOSTNAME"  }}'
       policy: "bypass"
@@ -104,3 +101,9 @@ server:
     read: "6s"
     write: "6s"
     idle: "30s"
+  endpoints:
+    authz:
+      forward-auth:
+        implementation: "ForwardAuth"
+        authn_strategies:
+          - name: "CookieSession"
