@@ -7,6 +7,15 @@ services:
       - 9091
     env_file:
       - .env
+    environment:
+      TEMPLATE_INFRA_HOSTNAMES: >-
+        ${BESZEL_HOSTNAME},
+        ${DOZZLE_HOSTNAME},
+        ${HONEY_HOSTNAME},
+        ${TRAEFIK_HOSTNAME},
+        ${UPTIME_KUMA_HOSTNAME}
+      TEMPLATE_ADDON_HOSTNAMES: >-
+        ${AIOSTREAMS_HOSTNAME}
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.authelia.rule=Host(`${AUTHELIA_HOSTNAME?}`)"

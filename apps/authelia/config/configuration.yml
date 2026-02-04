@@ -29,21 +29,16 @@ totp:
 access_control:
   default_policy: "deny"
   rules:
-    - domain:
-        - '{{ env "TEMPLATE_BESZEL_HOSTNAME"  }}'
-        - '{{ env "TEMPLATE_DOZZLE_HOSTNAME"  }}'
-        - '{{ env "TEMPLATE_HONEY_HOSTNAME"  }}'
-        - '{{ env "TEMPLATE_TRAEFIK_HOSTNAME"  }}'
-        - '{{ env "TEMPLATE_UPTIME_KUMA_HOSTNAME"  }}'
+    - domain_regex: '^({{ env "TEMPLATE_INFRA_HOSTNAMES" | replace "," "|" | replace "." "\\." | replace " " ""}})$'
       policy: "two_factor"
 
-    - domain: '{{ env "TEMPLATE_AIOSTREAMS_HOSTNAME"  }}'
+    - domain_regex: '^({{ env "TEMPLATE_ADDON_HOSTNAMES" | replace "," "|" | replace "." "\\." | replace " " ""}})$'
       resources:
         - '.*?/configure($|/.*$|\?.*$)'
         - "^/$"
       policy: "two_factor"
 
-    - domain: '{{ env "TEMPLATE_AIOSTREAMS_HOSTNAME"  }}'
+    - domain_regex: '^({{ env "TEMPLATE_ADDON_HOSTNAMES" | replace "," "|" | replace "." "\\." | replace " " ""}})$'
       policy: "bypass"
 
 # Reference: https://www.authelia.com/configuration/identity-validation/introduction/
