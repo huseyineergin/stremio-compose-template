@@ -342,7 +342,6 @@ When using PostgreSQL for AIOStreams’ database, set `POSTGRES_PASSWORD`, `POST
 > **Note:** When NOT using PostgreSQL for AIOStreams’ database, comment out the PostgreSQL related entries in `apps/aiostreams/compose.yaml` file.
 
 6\. Set the following values in the `apps/authelia/.env` file:
-- `REDIS_PASSWORD`
 - `POSTGRES_PASSWORD`
 - `POSTGRES_USER`
 - `POSTGRES_DB`

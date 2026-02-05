@@ -67,7 +67,6 @@ session:
     timeout: "5s"
     max_retries: 0
     port: 6379
-    password: '{{ env "REDIS_PASSWORD" }}'
 
 # Reference: https://www.authelia.com/configuration/storage/introduction/
 storage:
