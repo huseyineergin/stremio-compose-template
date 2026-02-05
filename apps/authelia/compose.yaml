@@ -42,8 +42,6 @@ services:
     user: "${PUID}:${PGID}"
     expose:
       - 6379
-    env_file:
-      - .env
     command: redis-server --appendonly yes --save 60 1
     volumes:
       - ${DOCKER_DATA_DIR}/authelia/cache:/data
