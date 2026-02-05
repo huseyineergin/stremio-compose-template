@@ -44,7 +44,7 @@ services:
       - 6379
     env_file:
       - .env
-    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}"]
+    command: redis-server --appendonly yes --save 60 1
     volumes:
       - ${DOCKER_DATA_DIR}/authelia/cache:/data
     healthcheck:
