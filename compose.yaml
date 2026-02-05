@@ -7,6 +7,7 @@ include:
   - apps/honey/compose.yaml
   - apps/init/compose.yaml
   - apps/mediaflow-proxy/compose.yaml
+  - apps/mediafusion/compose.yaml
   - apps/traefik/compose.yaml
   - apps/uptime-kuma/compose.yaml
   - apps/warp/compose.yaml
