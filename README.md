@@ -15,6 +15,7 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 
 ## Services
 
+- **[AIOMetadata](https://github.com/cedya77/aiometadata)** aggregates and enriches movie, series, and anime metadata from multiple sources.
 - **[AIOStreams](https://github.com/Viren070/AIOStreams)** consolidates multiple Stremio addons and debrid services, including its own suite of built-in addons, into a single, highly customisable super-addon.
 - **[Authelia](https://www.authelia.com/)** is an open-source authentication and authorization server and portal.
 - **[Beszel](https://beszel.dev/)** is a lightweight server monitoring platform that includes Docker statistics, historical data, and alert functions.
