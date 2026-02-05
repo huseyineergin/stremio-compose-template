@@ -5,11 +5,10 @@ mkdir -p /data/aiometadata/data
 mkdir -p /data/aiometadata/cache
 
 # AIOStreams
-mkdir -p /data/aiostreams
+mkdir -p /data/aiostreams/data
 mkdir -p /data/aiostreams/db
 
 # Authelia
-mkdir -p /data/authelia
 mkdir -p /data/authelia/db
 mkdir -p /data/authelia/cache
 

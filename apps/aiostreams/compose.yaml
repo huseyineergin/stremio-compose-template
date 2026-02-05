@@ -14,7 +14,7 @@ services:
       - "traefik.http.routers.aiostreams.tls.certresolver=letsencrypt"
       - "traefik.http.routers.aiostreams.middlewares=authelia@docker"
     volumes:
-      - ${DOCKER_DATA_DIR}/aiostreams:/app/data
+      - ${DOCKER_DATA_DIR}/aiostreams/data:/app/data
     depends_on:
       aiostreams-postgres:
         condition: service_healthy
