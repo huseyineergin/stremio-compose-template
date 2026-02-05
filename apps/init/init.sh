@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# AIOMetadata
+mkdir -p /data/aiometadata/data
+mkdir -p /data/aiometadata/cache
+
 # AIOStreams
 mkdir -p /data/aiostreams
 mkdir -p /data/aiostreams/db

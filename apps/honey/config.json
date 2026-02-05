@@ -14,6 +14,12 @@
   },
   "services": [
     {
+      "name": "AIOMetadata",
+      "desc": "",
+      "href": "https://${AIOMETADATA_HOSTNAME}",
+      "icon": "https://raw.githubusercontent.com/cedya77/aiometadata/refs/heads/dev/public/logo.png"
+    },
+    {
       "name": "AIOStreams",
       "desc": "",
       "href": "https://${AIOSTREAMS_HOSTNAME}",

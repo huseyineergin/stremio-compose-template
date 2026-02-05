@@ -15,6 +15,7 @@ services:
         ${TRAEFIK_HOSTNAME},
         ${UPTIME_KUMA_HOSTNAME}
       TEMPLATE_ADDON_HOSTNAMES: >-
+        ${AIOMETADATA_HOSTNAME},
         ${AIOSTREAMS_HOSTNAME}
     labels:
       - "traefik.enable=true"
