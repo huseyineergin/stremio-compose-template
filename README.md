@@ -31,8 +31,6 @@ Follow [Viren070's selfhosting guide](https://guides.viren070.me/selfhosting) to
 
 > **Note:** The following instructions are written for Debian/Ubuntu. Commands may vary depending on the Linux distribution.
 
-### Essential Setup
-
 As the first step, log in to the VPS as the `root` user using SSH.
 ```sh
 ssh -i /path/to/private/key root@VPS_PUBLIC_IP
