@@ -1,1 +1,4 @@
 data/
+
+apps/traefik/letsencrypt
+apps/authelia/config/notification.txt
