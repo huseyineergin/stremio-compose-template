@@ -18,6 +18,9 @@ services:
     depends_on:
       aiostreams-postgres:
         condition: service_healthy
+    profiles:
+      - aiostreams
+      - all
     restart: unless-stopped
 
   aiostreams-postgres:
@@ -37,4 +40,7 @@ services:
       retries: 3
       start_period: 30s
       start_interval: 5s
+    profiles:
+      - aiostreams
+      - all
     restart: unless-stopped

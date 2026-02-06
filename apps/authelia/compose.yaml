@@ -36,6 +36,10 @@ services:
         condition: service_healthy
       authelia-postgres:
         condition: service_healthy
+    profiles:
+      - authelia
+      - required
+      - all
     restart: unless-stopped
 
   authelia-redis:
@@ -54,6 +58,10 @@ services:
       retries: 3
       start_period: 30s
       start_interval: 5s
+    profiles:
+      - authelia
+      - required
+      - all
     restart: unless-stopped
 
   authelia-postgres:
@@ -73,4 +81,8 @@ services:
       retries: 3
       start_period: 30s
       start_interval: 5s
+    profiles:
+      - authelia
+      - required
+      - all
     restart: unless-stopped

@@ -15,4 +15,7 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     volumes:
       - ${DOCKER_DATA_DIR}/warp:/var/lib/cloudflare-warp
+    profiles:
+      - warp
+      - all
     restart: unless-stopped

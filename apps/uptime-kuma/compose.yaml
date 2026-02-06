@@ -14,3 +14,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ${DOCKER_DATA_DIR}/uptime-kuma:/app/data
+    profiles:
+      - uptime-kuma
+      - all
+    restart: unless-stopped

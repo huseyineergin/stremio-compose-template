@@ -18,6 +18,9 @@ services:
     depends_on:
       aiometadata-redis:
         condition: service_healthy
+    profiles:
+      - aiometadata
+      - all
     restart: unless-stopped
 
   aiometadata-redis:
@@ -34,4 +37,7 @@ services:
       retries: 3
       start_period: 30s
       start_interval: 5s
+    profiles:
+      - aiometadata
+      - all
     restart: unless-stopped

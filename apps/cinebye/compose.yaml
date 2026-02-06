@@ -17,4 +17,7 @@ services:
       retries: 3
       start_period: 30s
       start_interval: 5s
+    profiles:
+      - cinebye
+      - all
     restart: unless-stopped
