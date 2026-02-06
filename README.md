@@ -155,7 +155,7 @@ vim .env
 - `SECRET_KEY`
 - `ADDON_PASSWORD`
 - `DATABASE_URI`
-- `ADDON_PROXY`
+- `ADDON_PROXY` (Optional)
 
 When using PostgreSQL for AIOStreams’ database, set `POSTGRES_PASSWORD`, `POSTGRES_USER`, and `POSTGRES_DB`.
 
@@ -183,7 +183,7 @@ users:
 
 9\. Set the following values in the `apps/mediaflow-proxy/.env` file:
 - `API_PASSWORD`
-- `PROXY_URL`
+- `PROXY_URL` (Optional)
 
 10\. Set the email address in the `apps/traefik/traefik.yaml` file:
 ```yaml
