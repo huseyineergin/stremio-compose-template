@@ -23,8 +23,8 @@ services:
       retries: 3
       start_period: 30s
       start_interval: 5s
-    restart: unless-stopped
     profiles:
       - traefik
       - required
       - all
+    restart: unless-stopped
