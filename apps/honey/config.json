@@ -50,12 +50,6 @@
       "icon": "https://raw.githubusercontent.com/amir20/dozzle/refs/heads/master/docs/public/logo.svg"
     },
     {
-      "name": "MediaFusion",
-      "desc": "",
-      "href": "https://${MEDIAFUSION_HOSTNAME}",
-      "icon": "https://raw.githubusercontent.com/mhdzumair/MediaFusion/refs/heads/main/resources/images/mediafusion_logo.png"
-    },
-    {
       "name": "Traefik",
       "desc": "",
       "href": "https://${TRAEFIK_HOSTNAME}",

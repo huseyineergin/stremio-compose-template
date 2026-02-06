@@ -20,11 +20,6 @@ mkdir -p /data/beszel/socket
 # Honey
 mkdir -p /data/honey
 
-# MediaFusion
-mkdir -p /data/mediafusion/mongo
-mkdir -p /data/mediafusion/db
-mkdir -p /data/mediafusion/cache
-
 # Traefik
 touch /letsencrypt/acme.json
 chmod 600 /letsencrypt/acme.json

@@ -17,8 +17,7 @@ services:
         ${UPTIME_KUMA_HOSTNAME}
       TEMPLATE_ADDON_HOSTNAMES: >-
         ${AIOMETADATA_HOSTNAME},
-        ${AIOSTREAMS_HOSTNAME},
-        ${MEDIAFUSION_HOSTNAME}
+        ${AIOSTREAMS_HOSTNAME}
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.authelia.rule=Host(`${AUTHELIA_HOSTNAME?}`)"
