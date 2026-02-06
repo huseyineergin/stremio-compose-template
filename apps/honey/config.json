@@ -10,7 +10,9 @@
     "ping_dots": false,
     "blur": true,
     "animations": true,
-    "trusted_domains": ["${DOMAIN}"]
+    "trusted_domains": [
+      "${DOMAIN}"
+    ]
   },
   "services": [
     {
@@ -36,12 +38,6 @@
       "desc": "",
       "href": "https://${BESZEL_HOSTNAME}",
       "icon": "https://raw.githubusercontent.com/henrygd/beszel/refs/heads/main/internal/site/public/static/icon.svg"
-    },
-    {
-      "name": "Cinebye",
-      "desc": "",
-      "href": "https://${CINEBYE_HOSTNAME}",
-      "icon": "https://raw.githubusercontent.com/0xConstant1/stremio-addon-manager/refs/heads/main/public/logo.png"
     },
     {
       "name": "Dozzle",

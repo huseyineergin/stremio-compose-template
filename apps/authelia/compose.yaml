@@ -10,7 +10,6 @@ services:
     environment:
       TEMPLATE_INFRA_HOSTNAMES: >-
         ${BESZEL_HOSTNAME},
-        ${CINEBYE_HOSTNAME},
         ${DOZZLE_HOSTNAME},
         ${HONEY_HOSTNAME},
         ${TRAEFIK_HOSTNAME},
