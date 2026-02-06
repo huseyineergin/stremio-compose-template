@@ -5,8 +5,6 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 ## Contents
 
 - [Services](#services)
-- [VPS Setup](#vps-setup)
-    * [Essential Setup](#essential-setup)
 - [Getting Started](#getting-started)
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
@@ -25,94 +23,13 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 - **[Uptime Kuma](https://github.com/louislam/uptime-kuma)** is an easy-to-use self-hosted monitoring tool.
 - **[WARP-Docker](https://github.com/cmj2002/warp-docker)** runs official [Cloudflare WARP](https://1.1.1.1) client in Docker.
 
-## VPS Setup
+## Getting Started
 
-Follow [Viren070's selfhosting guide](https://guides.viren070.me/selfhosting) to set up an Oracle VPS, or use an existing one. This section focuses on what to do after creating a VPS instance to walk through the essential post-setup steps to turn it into a "production-ready" server. Most of this section is based on **“My First 5 Minutes on a Server; or, Essential Security for Linux Servers”** by Bryan Kennedy.
+### Prerequisites
 
-> **Note:** The following instructions are written for Debian/Ubuntu. Commands may vary depending on the Linux distribution.
-
-As the first step, log in to the VPS as the `root` user using SSH.
-```sh
-ssh -i /path/to/private/key root@VPS_PUBLIC_IP
-```
-
-#### 1. Change Root Password
-
-Change the `root` password to something long and complex. This password should be stored securely. It is needed if SSH access is lost or the `sudo` password needs to be recovered.
-```sh
-passwd
-```
-
-#### 2. Update and Upgrade Packages
-
-Update the package list and upgrade all installed packages to their latest versions.
-```sh
-apt-get update && apt-get upgrade -y
-```
-
-Install `fail2ban`. It is a daemon that monitors login attempts to a server and blocks suspicious activity as it occurs. It’s well configured out of the box.
-```sh
-apt install fail2ban
-```
-
-#### 3. Add a New User
-
-Add a login user. Feel free to name the user something besides `debian`.
-```sh
-useradd -s /bin/bash -m debian
-mkdir /home/debian/.ssh
-chmod 700 /home/debian/.ssh
-```
-
-Set a password for the login user. Use a complex password. This password will be used for `sudo` access.
-```sh
-passwd debian
-```
-
-Add login user to the `sudoers`.
-```sh
-usermod -aG sudo debian
-```
-
-#### 4. Configure Public Key Authentication
-
-Add public keys for authentication. It'll enhance security and ease of use by ditching passwords and employing [public key authentication](https://en.wikipedia.org/wiki/Public-key_cryptography) for user accounts. Add the contents of the local public key file, along with any additional public keys requiring access to this server, to this file.
-```sh
-vim /home/debian/.ssh/authorized_keys
-# ...
-chmod 400 /home/debian/.ssh/authorized_keys
-chown debian:debian /home/debian -R
-```
-
-#### 5. Harden SSH Configuration
-
-Configure SSH to prevent password and `root` logins.
-```sh
-vim /etc/ssh/sshd_config
-```
-
-Add the following lines to the file.
-```conf
-PermitRootLogin no
-PasswordAuthentication no
-```
-
-Restart SSH.
-```sh
-service ssh restart
-# or
-systemctl restart ssh.service
-```
-
-#### 6. Configure Firewall
-
-Set up a firewall. [`ufw`](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29) and [`firewalld`](https://firewalld.org/) provide a simple setup, while [`iptables`](https://wiki.archlinux.org/title/Iptables) and [`nftables`](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page) offer more advanced configuration options.
-```sh
-ufw allow <SOURCE_PUBLIC_IP> to any port 22
-ufw allow 80
-ufw allow 443
-```
-This sets up a basic firewall and allows traffic on ports 80 and 443.
+- A VPS with [Docker](https://www.docker.com/) installed. Follow the [official installation steps](https://docs.docker.com/engine/install/) for the selected platform.
+- Ports 80 and 443 are accessible on the VPS.
+- A domain with DNS records configured to point to the VPS IP for each domain or subdomain in use.
 
 ### Installation
 
