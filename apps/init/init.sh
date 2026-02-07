@@ -28,7 +28,4 @@ chown -R "${PUID}:${PGID}" /letsencrypt
 # Uptime Kuma
 mkdir -p /data/uptime-kuma
 
-# WARP
-mkdir -p /data/warp
-
 chown -R "${PUID}:${PGID}" /data
