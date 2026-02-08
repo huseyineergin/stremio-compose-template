@@ -120,9 +120,11 @@ docker compose up -d init
 docker compose --profile all up -d
 ```
 
-Once the services are running, follow the instructions in the `apps/beszel/.env` file to set up Beszel.
-
 ### Post-Installation
+
+#### Beszel
+
+Follow the instructions in the `apps/beszel/.env` file to set up Beszel.
 
 #### Mediaflow Proxy
 
