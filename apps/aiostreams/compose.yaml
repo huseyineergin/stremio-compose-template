@@ -1,6 +1,6 @@
 services:
   aiostreams:
-    image: viren070/aiostreams:v2.22.0
+    image: viren070/aiostreams:v2.23.0
     container_name: aiostreams
     user: "${PUID}:${PGID}"
     expose:
