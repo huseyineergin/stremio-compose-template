@@ -13,4 +13,4 @@ include:
 networks:
   default:
     external: ${DOCKER_NETWORK_EXTERNAL:-false}
-    name: ${DOCKER_NETWORK_NAME:-stremio-network}
+    name: ${DOCKER_NETWORK_NAME:-compose-network}

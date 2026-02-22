@@ -1,6 +1,6 @@
-# Stremio Compose Template
+# Compose Template
 
-This is a simplified version of [Viren070's template](https://github.com/Viren070/docker-compose-template) with several modifications, focusing on Stremio and monitoring services.
+A Docker Compose template for self-hosting various services.
 
 ## Contents
 
@@ -34,8 +34,8 @@ This is a simplified version of [Viren070's template](https://github.com/Viren07
 
 1\. Prepare the installation folder.
 ```sh
-sudo mkdir /opt/stremio
-sudo chown PUID:PGID /opt/stremio
+sudo mkdir /opt/compose
+sudo chown PUID:PGID /opt/compose
 ```
 
 > **Note:** The PUID and PGID can be found by running the `id` command.
@@ -43,8 +43,8 @@ sudo chown PUID:PGID /opt/stremio
 2\. Clone this repository and navigate into it:
 ```sh
 cd /opt
-git clone https://github.com/huseyineergin/stremio-compose-template.git stremio
-cd stremio
+git clone https://github.com/huseyineergin/compose-template.git compose
+cd compose
 ```
 
 3\. Use a text editor (nano, vim) to open the `.env` file. VS Code (with the `Remote - SSH` extension) can also be used to edit the files.
