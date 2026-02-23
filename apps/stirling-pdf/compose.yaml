@@ -6,7 +6,8 @@ services:
       - 8080
     environment:
       - SECURITY_ENABLELOGIN=false
-      - LANGS=en_US
+      - PUID=${PUID}
+      - PGID=${PGID}
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.stirling-pdf.rule=Host(`${STIRLING_PDF_HOSTNAME?}`)"
