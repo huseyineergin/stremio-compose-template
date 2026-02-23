@@ -46,6 +46,12 @@
       "icon": "https://raw.githubusercontent.com/amir20/dozzle/refs/heads/master/docs/public/logo.svg"
     },
     {
+      "name": "Stirling PDF",
+      "desc": "",
+      "href": "https://${STIRLING_PDF_HOSTNAME}",
+      "icon": "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/refs/heads/main/docs/stirling.svg"
+    },
+    {
       "name": "Traefik",
       "desc": "",
       "href": "https://${TRAEFIK_HOSTNAME}",

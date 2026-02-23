@@ -20,6 +20,10 @@ mkdir -p /data/beszel/socket
 # Honey
 mkdir -p /data/honey
 
+# Stirling PDF
+mkdir -p /data/stirling-pdf/pipeline
+mkdir -p /data/stirling-pdf/configs
+
 # Traefik
 touch /letsencrypt/acme.json
 chmod 600 /letsencrypt/acme.json

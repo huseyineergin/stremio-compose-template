@@ -19,6 +19,7 @@ A Docker Compose template for self-hosting various services.
 - **[Dozzle](https://dozzle.dev/)** is a lightweight, web-based log viewer designed to simplify monitoring and debugging containerized applications across Docker, Docker Swarm, and Kubernetes environments.
 - **[Honey](https://github.com/dani3l0/honey)** is a simple dashboard/homepage for organizing and quickly accessing self-hosted services.
 - **[MediaFlow Proxy](https://github.com/mhdzumair/mediaflow-proxy)** is a powerful and flexible solution for proxifying various types of media streams.
+- **[Stirling PDF](https://www.stirling.com/)** is a powerful, open-source PDF editing platform.
 - **[Traefik](https://github.com/traefik/traefik)** is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
 - **[Uptime Kuma](https://github.com/louislam/uptime-kuma)** is an easy-to-use self-hosted monitoring tool.
 

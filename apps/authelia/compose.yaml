@@ -12,6 +12,7 @@ services:
         ${BESZEL_HOSTNAME},
         ${DOZZLE_HOSTNAME},
         ${HONEY_HOSTNAME},
+        ${STIRLING_PDF_HOSTNAME},
         ${TRAEFIK_HOSTNAME},
         ${UPTIME_KUMA_HOSTNAME}
       TEMPLATE_ADDON_HOSTNAMES: >-
